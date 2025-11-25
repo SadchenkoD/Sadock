@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Результат{% endblock %}
+{% block content %}
+    <h1>Данные формы</h1>
+    <p><strong>Фамилия:</strong> {{ last_name|default:"—" }}</p>
+    <p><strong>Имя:</strong> {{ first_name|default:"—" }}</p>
+    <p><strong>Отчество:</strong> {{ middle_name|default:"—" }}</p>
+    <p><strong>Возраст:</strong> {{ age|default:"—" }}</p>
+    <p><strong>Адрес:</strong> {{ address|default:"—" }}</p>
+    <p><strong>Группа:</strong> {{ group|default:"—" }}</p>
+    <p><strong>Предметы:</strong> {{ subjects|default:"—" }}</p>
+    <p><a href="{% url 'form_html' %}">← Назад</a></p>
+{% endblock %}

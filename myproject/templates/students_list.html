@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Студенты{% endblock %}
+{% block content %}
+    <h1>Работа с моделями</h1>
+
+    <h2>Все студенты:</h2>
+    <ul>{% for s in all_students %}<li>{{ s }}</li>{% endfor %}</ul>
+
+    <h2>Студент "Иванов":</h2>
+    <p>{{ student_by_name|default:"Не найден" }}</p>
+
+    <h2>2000 год:</h2>
+    <ul>{% for s in students_2000 %}<li>{{ s }}</li>{% endfor %}</ul>
+
+    <h2>Не из группы 101:</h2>
+    <ul>{% for s in not_group_101 %}<li>{{ s }}</li>{% endfor %}</ul>
+
+    <h2>Первые 2:</h2>
+    <ul>{% for s in first_two %}<li>{{ s }}</li>{% endfor %}</ul>
+
+    <h2>По фамилии ↓:</h2>
+    <ul>{% for s in sorted_desc %}<li>{{ s }}</li>{% endfor %}</ul>
+{% endblock %}

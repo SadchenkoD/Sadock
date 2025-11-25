@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}HTML Форма{% endblock %}
+{% block content %}
+    <h1>Форма ввода</h1>
+    <form method="get" action="{% url 'form_html_result' %}">
+        <p>Фамилия: <input type="text" name="last_name"></p>
+        <p>Имя: <input type="text" name="first_name"></p>
+        <p>Отчество: <input type="text" name="middle_name"></p>
+        <p>Возраст: <input type="number" name="age"></p>
+        <p>Номер телефона: <input type="number" name="call"></p>
+        <p>Адрес: <textarea name="address"></textarea></p>
+        <p>Группа:
+            <select name="group">
+                <option value="У-242">У-242</option>
+                <option value="ЭБ-21">ЭБ-21</option>
+                <option value="М-243">М-243</option>
+            </select>
+        </p>
+        <p>Предметы:
+
+            <input type="checkbox" name="subjects" value="Математика"> Математика
+            <input type="checkbox" name="subjects" value="Физика"> Физика
+            <input type="checkbox" name="subjects" value="Информатика"> Информатика
+            <input type="checkbox" name="subjects" value="Обществознание"> Обществознание
+            <input type="checkbox" name="subjects" value="Русский язык"> Русский язык
+
+        </p>
+        <button type="submit">Отправить</button>
+    </form>
+{% endblock %}

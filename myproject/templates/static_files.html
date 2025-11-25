@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Статические файлы{% endblock %}
+{% block content %}
+    <h1>Статические файлы</h1>
+    <img src="{% static 'images/sample.jpg' %}" alt="Пример">
+    <p>Картинка с CSS-стилями.</p>
+{% endblock %}
